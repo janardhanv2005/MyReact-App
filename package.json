@@ -1,0 +1,27 @@
+{
+  "name": "myreact-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janardhanv2005/MyReact-App.git"
+  },
+  "author": "Janardhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janardhanv2005/MyReact-App/issues"
+  },
+  "homepage": "https://github.com/janardhanv2005/MyReact-App#readme",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 {
   /* <div id="parent">
     <div id="child">
@@ -25,8 +27,17 @@ const header = React.createElement(
   { id: "heading" },
   "Hello World from React!!"
 );
+
+const Title = () => <h1 tabindex="5">I am Title</h1>;
+const HeadingComponent = () => (
+<div id="container">
+  <Title />
+<h1> Hellow World from React Component </h1>
+</div>
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(<HeadingComponent />);
 // setTimeout(()=>{
 //     root.render(parent);
 // }, 5000);
