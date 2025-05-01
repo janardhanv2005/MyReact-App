@@ -10,7 +10,16 @@ const Body = () => {
 
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.2472528&lng=80.1514447&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const restData = await data.json();
-        const restaurentCards = restData.data.cards[3].card.card.gridElements.infoWithStyle.restaurants;
+
+        const cards = restData.data.cards;
+
+const targetCard = cards.find(card => 
+  card?.card?.card?.gridElements?.infoWithStyle?.restaurants
+);
+
+// Then access the restaurants
+const restaurentCards = targetCard?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        //const restaurentCards = restData.data.cards[3].card.card.gridElements.infoWithStyle.restaurants;
         //console.log(restaurentCards);
         setRestaurents(restaurentCards)
     }
