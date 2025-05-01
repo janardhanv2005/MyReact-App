@@ -56,3 +56,11 @@ width: 100px;
     80%  { transform: translateX(5px); }
     100% { transform: translateX(0); }
 }
+.filter-btn {
+    margin: 10px;
+}
+.filter-btn:hover {
+    cursor: pointer;
+}
+
+
