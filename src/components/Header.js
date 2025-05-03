@@ -1,4 +1,13 @@
-const Header = () => {return (
+import { useEffect, useState } from "react";
+
+const Header = () => {
+  
+  const [loginState, setLoginState] = useState("Login");
+
+  useEffect(() => {
+    console.log("useEffect Called");
+  },[loginState])
+  return (
     <div className='headerContainer'>
     <img className='res-logo' src='https://marketplace.canva.com/EAFpeiTrl4c/2/0/1600w/canva-abstract-chef-cooking-restaurant-free-logo-a1RYzvS1EFo.jpg'/>
     <ul className="nav-items">
@@ -6,6 +15,9 @@ const Header = () => {return (
       <li>About</li>
       <li>Countact Us</li>
       <li>Cart</li>
+      <button onClick={() =>{
+       loginState === "Logout" ? setLoginState("Login") : setLoginState("Logout");
+      }}>{loginState}</button>
     </ul>
     </div>
     )};

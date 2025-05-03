@@ -1,7 +1,6 @@
 import {COMINGSOON_IMG} from '../utils/mockData'
 const RestaurentCard = ({resCard}) => { 
   const baseImageURL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-  console.log(resCard);
     const {id, name, cuisines, avgRating, sla, cloudinaryImageId} = resCard;
     return (
     <div id='restCard' className='rest-card'>
