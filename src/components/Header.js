@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   
@@ -11,9 +12,9 @@ const Header = () => {
     <div className='headerContainer'>
     <img className='res-logo' src='https://marketplace.canva.com/EAFpeiTrl4c/2/0/1600w/canva-abstract-chef-cooking-restaurant-free-logo-a1RYzvS1EFo.jpg'/>
     <ul className="nav-items">
-      <li>Home</li>
-      <li>About</li>
-      <li>Countact Us</li>
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/about">About</Link></li>
+      <li><Link to="/contact">Contact Us</Link></li>
       <li>Cart</li>
       <button onClick={() =>{
        loginState === "Logout" ? setLoginState("Login") : setLoginState("Logout");
