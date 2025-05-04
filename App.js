@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Contact from './src/components/Contact';
 import Error from './src/components/Error';
 import { Outlet } from 'react-router-dom';
+import RestaurentMenu from './src/components/RestaurentMenu';
 
 const AppLayout = () => {
 
@@ -15,7 +16,7 @@ const AppLayout = () => {
     <div className="app">
     <Header />
     <Outlet />
-    <Footer />
+    {/* <Footer /> */}
     </div>
   )
 };
@@ -34,6 +35,9 @@ const routerConfig = createBrowserRouter([
       },{
         path: "/contact",
         element: <Contact />
+      },{
+        path: "/restaurent/:restId",
+        element: <RestaurentMenu />
       },
     ],
     errorElement: <Error />
